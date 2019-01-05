@@ -154,7 +154,7 @@ window.addEventListener("hashchange", function(event) {
   }, 250);
 });
 document.getElementById("sendmessage").addEventListener("click", function(e) {
-  var emailadd = "aavgeensingh1@gmail.com";
+  var emailadd = "contact@aavgeen.com";
   var name = document.getElementById("contact_name").value;
   var subj = document.getElementById("contact_subject").value;
   var message = document.getElementById("contact_message").value;
