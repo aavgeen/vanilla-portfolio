@@ -4,9 +4,15 @@ var main = document.getElementById("main");
 var panels = Array.from(main.getElementsByTagName("article")); // panels class components with article tag
 var nav = document.getElementById("nav");
 var nav_links = Array.from(nav.getElementsByTagName("a"));
-
-
-
+// Make sure sw are supported
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('../sw_cached_pages.js')
+      .then(reg => console.log('Service Worker: Registered (Pages)'))
+      .catch(err => console.log(`Service Worker: Error: ${err}`));
+  });
+}
 // Play initial animations on page load.
 window.addEventListener("load", function() {
   window.setTimeout(function() {
