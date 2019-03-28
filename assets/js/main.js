@@ -42,7 +42,7 @@ window.addEventListener('appinstalled', (evt) => {
 window.addEventListener("load", function() {
   window.setTimeout(function() {
     body[0].classList.remove("is-preload");
-  }, 100);
+  }, 10);
 });
 
 // Nav.

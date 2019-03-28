@@ -3,9 +3,9 @@
   "short_name": "Aavi",
   "theme_color": "#7ccec8",
   "background_color": "#7ccec8",
-  "display": "fullscreen",
+  "display": "standalone",
   "Scope": "/",
-  "start_url": "./?utm_source=homescreen",
+  "start_url": "/index.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
