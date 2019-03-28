@@ -1,11 +1,11 @@
-const cacheName = 'v1';
+const cacheName = 'portfolio-v1';
 
 const cacheAssets = [
   './index.html',
   './assets/css/font-awesome.min.css',
   './assets/css/main.css',
   './assets/js/main.js',
-  './images/aavi_me.jpg'
+  './images/aavi_me.png'
 ];
 
 // Call Install Event
@@ -44,5 +44,5 @@ self.addEventListener('activate', e => {
 // Call Fetch Event
 self.addEventListener('fetch', e => {
   console.log('Service Worker: Fetching');
-  e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+  // e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
 });

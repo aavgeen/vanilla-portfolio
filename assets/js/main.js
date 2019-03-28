@@ -13,6 +13,31 @@ if ('serviceWorker' in navigator) {
       .catch(err => console.log(`Service Worker: Error: ${err}`));
   });
 }
+var btnAdd = document.getElementById('btnadd');
+var defferedPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  defferedPrompt = e;
+  console.log("went here");
+  
+  btnAdd.style.display = 'block';
+});
+
+btnAdd.addEventListener('click', (e) => {
+  defferedPrompt.prompt();
+  defferedPrompt.userChoice.then((choiceResult) => {
+    if (choiceResult.outcome === 'accepted') {
+      console.log('User accepted the A2HS prompt.');
+    }
+    defferedPrompt = null;
+    // Also, here we can hide he addBtn
+  })
+});
+
+window.addEventListener('appinstalled', (evt) => {
+  // app.logEvent('a2hs', 'installed');
+});
+
 // Play initial animations on page load.
 window.addEventListener("load", function() {
   window.setTimeout(function() {
