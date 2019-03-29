@@ -14,9 +14,157 @@
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#7ccec8">
     <meta name="Description" content="Portfolio website of Aavgeen Singh.">
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* Basic */
+
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      body {
+        /* background-image: url("images/overlay.png"), url("images/bg.jpg"); */
+        /* background-image: linear-gradient(red, yellow); */
+        background: #085078; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to bottom,
+          #85d8ce,
+          #085078
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to bottom,
+          #85d8ce,
+          #085078
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        background-size: auto, 100% 100%;
+        background-attachment: fixed;
+        overflow-y: scroll;
+      }
+
+      body.is-preload *,
+      body.is-preload *:before,
+      body.is-preload *:after {
+        -moz-animation: none !important;
+        -webkit-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+        -moz-transition: none !important;
+        -webkit-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+      }
+
+      body,
+      input,
+      textarea,
+      select {
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 300;
+        color: #777777;
+        font-size: 1.5rem;
+        line-height: 1.75em;
+      }
+    </style>
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="images/aavi_me.png">
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.min.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
   </head>
   <body class="is-preload">
@@ -40,7 +188,12 @@
           <div class="intro">
             <div class="flex-col">
               <a href="#work" class="jumplink pic">
-                <img src="images/aavi_me.png" alt="Aavgeen Singh picture" class="grow growimg" />
+                  <picture class="grow growimg">
+                    <source srcset="images/aavi_me.webp" type="image/webp">
+                    <source srcset="images/aavi_me.png" type="image/jpeg"> 
+                    <img src="images/aavi_me.png" alt="Aavgeen Singh picture">
+                  </picture>
+                <!-- <img src="images/aavi_me.png" alt="Aavgeen Singh picture" class="grow growimg" /> -->
               </a>
               <h1>Aavgeen Singh</h1>
               <p class="skill-title">Full Stack Developer/Consultant</p>
@@ -121,7 +274,12 @@
             <div class="row">
               <div class="items zoom">
                 <div href="#" class="">
-                  <img src="https://raw.githubusercontent.com/aavgeen1/Rich_Quotes/master/screenshots/almega.JPG" alt="" class="fit"/>
+                    <picture class="grow growimg">
+                      <source srcset="images/webp/almega.webp" type="image/webp">
+                      <source srcset="https://raw.githubusercontent.com/aavgeen1/Rich_Quotes/master/screenshots/almega.JPG" type="image/jpeg"> 
+                      <img src="https://raw.githubusercontent.com/aavgeen1/Rich_Quotes/master/screenshots/almega.JPG" alt="Almega Website Screenshot" class="fit"/>
+                    </picture>
+                  <!-- <img src="https://raw.githubusercontent.com/aavgeen1/Rich_Quotes/master/screenshots/almega.JPG" alt="" class="fit"/> -->
                 </div>
                 <div>
                     <span class="padding-15">Almega</span>
@@ -131,7 +289,12 @@
               </div>
               <div class="items zoom">
                 <div href="#" class="">
-                  <img src="https://i.vimeocdn.com/video/738809663_1280x720.jpg" alt="" class="fit"/>
+                    <picture class="grow growimg">
+                      <source srcset="images/webp/738809663_1280x720.webp" type="image/webp">
+                      <source srcset="https://i.vimeocdn.com/video/738809663_1280x720.jpg" type="image/jpeg"> 
+                      <img src="https://i.vimeocdn.com/video/738809663_1280x720.jpg" alt="Plenty Trade Screenshot" class="fit"/>
+                    </picture>
+                  <!-- <img src="https://i.vimeocdn.com/video/738809663_1280x720.jpg" alt="" class="fit"/> -->
                 </div>
                 <div>
                     <span class="padding-15">PlentyTrade</span>
@@ -141,7 +304,12 @@
               </div>
               <div class="items zoom">
                 <div href="#" class="">
-                  <img src="https://github.com/aavgeen1/PokeApp/raw/master/screenshots/pokeapp1.jpg" alt="" class="fit"/>
+                    <picture class="grow growimg">
+                      <source srcset="images/webp/pokeapp1.webp" type="image/webp">
+                      <source srcset="https://github.com/aavgeen1/PokeApp/raw/master/screenshots/pokeapp1.jpg" type="image/jpeg"> 
+                      <img src="https://github.com/aavgeen1/PokeApp/raw/master/screenshots/pokeapp1.jpg" alt="Aavgeen Singh picture" class="fit" alt="PokeApp Screenshot">
+                    </picture>
+                  <!-- <img src="https://github.com/aavgeen1/PokeApp/raw/master/screenshots/pokeapp1.jpg" alt="" class="fit"/> -->
                 </div>
                 <div>
                     <span class="padding-15">PokeApp</span>
@@ -151,7 +319,12 @@
               </div>
               <div class="items zoom">
                 <div href="#" class="">
-                  <img src="https://github.com/aavgeen1/social-fly-mern/raw/master/screenshots/signup.jpg" alt="" class="fit"/>
+                    <picture class="grow growimg">
+                      <source srcset="images/webp/signup.webp" type="image/webp">
+                      <source srcset="https://github.com/aavgeen1/social-fly-mern/raw/master/screenshots/signup.jpg" type="image/jpeg"> 
+                      <img src="https://github.com/aavgeen1/social-fly-mern/raw/master/screenshots/signup.jpg" alt="Social Fly Screenshot" class="fit"/>
+                    </picture>
+                  <!-- <img src="https://github.com/aavgeen1/social-fly-mern/raw/master/screenshots/signup.jpg" alt="" class="fit"/> -->
                 </div>
                 <div>
                     <span class="padding-15">Social fly MERN</span>
@@ -161,7 +334,12 @@
               </div>
               <div class="items zoom">
                 <div href="#" class="">
-                  <img src="https://github.com/aavgeen1/user-manage/raw/master/screenshots/userlist.jpg" alt="User Management reactjs app" class="fit"/>
+                    <picture class="grow growimg">
+                      <source srcset="images/webp/userlist.webp" type="image/webp">
+                      <source srcset="https://github.com/aavgeen1/user-manage/raw/master/screenshots/userlist.jpg" type="image/jpeg"> 
+                      <img src="https://github.com/aavgeen1/user-manage/raw/master/screenshots/userlist.jpg" alt="User Management reactjs app" class="fit"/>
+                    </picture>
+                  <!-- <img src="https://github.com/aavgeen1/user-manage/raw/master/screenshots/userlist.jpg" alt="User Management reactjs app" class="fit"/> -->
                 </div>
                 <div>
                     <span class="padding-15">User Manage</span>
@@ -171,7 +349,12 @@
               </div>
               <div class="items zoom">
                 <div href="#" class="">
-                  <img src="https://github.com/aavgeen1/kickstarterClone-reactjs/raw/master/home.jpg" alt="" class="fit"/>
+                    <picture class="grow growimg">
+                      <source srcset="images/webp/home.webp" type="image/webp">
+                      <source srcset="https://github.com/aavgeen1/kickstarterClone-reactjs/raw/master/home.jpg" type="image/jpeg"> 
+                      <img src="https://github.com/aavgeen1/kickstarterClone-reactjs/raw/master/home.jpg" alt="Kickstarter clone Screenshot" class="fit"/>
+                    </picture>
+                  <!-- <img src="https://github.com/aavgeen1/kickstarterClone-reactjs/raw/master/home.jpg" alt="" class="fit"/> -->
                 </div>
                 <div>
                     <span class="padding-15">Kickstarter Clone</span>
@@ -181,7 +364,12 @@
               </div>
               <div class="items zoom">
                   <div href="#" class="">
-                    <img src="https://hl-img.download.9appsinstall.com/9apps/rs/2017/5d136ee4a03b24403edb146f292b8ead.jpg__peco__,80,__peco__3,480" alt="" class="fit"/>
+                      <picture class="grow growimg">
+                        <source srcset="images/webp/5d136ee4a03b24403edb146f292b8ead.webp" type="image/webp">
+                        <source srcset="https://hl-img.download.9appsinstall.com/9apps/rs/2017/5d136ee4a03b24403edb146f292b8ead.jpg__peco__,80,__peco__3,480" type="image/jpeg"> 
+                        <img src="https://hl-img.download.9appsinstall.com/9apps/rs/2017/5d136ee4a03b24403edb146f292b8ead.jpg__peco__,80,__peco__3,480" alt="Brelax Screenshot" class="fit"/>
+                      </picture>
+                    <!-- <img src="https://hl-img.download.9appsinstall.com/9apps/rs/2017/5d136ee4a03b24403edb146f292b8ead.jpg__peco__,80,__peco__3,480" alt="" class="fit"/> -->
                   </div>
                   <div>
                       <span class="padding-15">Brelax</span>
@@ -191,7 +379,12 @@
                 </div>
                 <div class="items zoom">
                   <div href="#" class="">
-                    <img src="https://lh3.googleusercontent.com/OOmmtexsRQFmrMBL39T9wH8SKxWWCUyUQHptGNffLDFG-HlV6Mznwf7S1LZvrhOlLm4=w1024-h720-rw" alt="" class="fit"/>
+                      <picture class="grow growimg">
+                        <source srcset="images/webp/unnamed.webp" type="image/webp">
+                        <source srcset="https://lh3.googleusercontent.com/OOmmtexsRQFmrMBL39T9wH8SKxWWCUyUQHptGNffLDFG-HlV6Mznwf7S1LZvrhOlLm4=w1024-h720-rw" type="image/jpeg"> 
+                        <img src="https://lh3.googleusercontent.com/OOmmtexsRQFmrMBL39T9wH8SKxWWCUyUQHptGNffLDFG-HlV6Mznwf7S1LZvrhOlLm4=w1024-h720-rw" alt="Shuddhi App Screenshot" class="fit"/>
+                      </picture>
+                    <!-- <img src="https://lh3.googleusercontent.com/OOmmtexsRQFmrMBL39T9wH8SKxWWCUyUQHptGNffLDFG-HlV6Mznwf7S1LZvrhOlLm4=w1024-h720-rw" alt="" class="fit"/> -->
                   </div>
                   <div>
                       <span class="padding-15">Shuddhi</span>
@@ -201,7 +394,12 @@
                 </div>
               <div class="items zoom">
                 <div href="#" class="">
-                  <img src="https://github.com/aavgeen1/Rich_Quotes/raw/master/screenshots/Screenshot_1524765233.png" alt="" class="fit"/>
+                    <picture class="grow growimg">
+                      <source srcset="images/webp/Screenshot_1524765233.webp" type="image/webp">
+                      <source srcset="https://github.com/aavgeen1/Rich_Quotes/raw/master/screenshots/Screenshot_1524765233.png" type="image/jpeg"> 
+                      <img src="https://github.com/aavgeen1/Rich_Quotes/raw/master/screenshots/Screenshot_1524765233.png" alt="Rich Quotes App Screenshot" class="fit"/> 
+                    </picture>
+                  <!-- <img src="https://github.com/aavgeen1/Rich_Quotes/raw/master/screenshots/Screenshot_1524765233.png" alt="" class="fit"/> -->
                 </div>
                 <div>
                     <span class="padding-15">Rich Quotes</span>
@@ -211,7 +409,12 @@
               </div>
               <div class="items zoom">
                 <div href="#" class="">
-                  <img src="https://github.com/aavgeen1/TicTacToeRN/raw/master/screenshots/tictac5.JPG" alt="" class="fit"/>
+                    <picture class="grow growimg">
+                      <source srcset="images/webp/tictac5.webp" type="image/webp">
+                      <source srcset="https://github.com/aavgeen1/TicTacToeRN/raw/master/screenshots/tictac5.JPG" type="image/jpeg"> 
+                      <img src="https://github.com/aavgeen1/TicTacToeRN/raw/master/screenshots/tictac5.JPG" alt="Tic Tac Toe App Screenshot" class="fit"/>
+                    </picture>
+                  <!-- <img src="https://github.com/aavgeen1/TicTacToeRN/raw/master/screenshots/tictac5.JPG" alt="" class="fit"/> -->
                 </div>
                 <div>
                     <span class="padding-15">Tic Tac Toe</span>
